@@ -5,10 +5,15 @@ body {
     margin: 0;
 }
 
+body.hideScroll {
+    overflow: hidden;
+}
+
 a {
     color: #ff5e84;
     font-weight: bold;
     text-decoration: none;
+    font-size: 14px;
 }
 
 a:hover {
@@ -16,25 +21,47 @@ a:hover {
 }
 
 p, .description {
-    font-size: 16px;
+    font-size: 13px;
     line-height: 24px;
     letter-spacing: 0.1px;
+}
+
+.button {
+    color: white;
+    background: #ff5e84;
+    width: 150px;
+    height: 40px;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
+    box-shadow: 0 8px 16px #ff5e8432;
+}
+
+.button:hover {
+    background-color: rgb(111, 179, 231);
+    text-decoration: none;
 }
 
 #container {
     width: 80%;
     max-width: 980px;
-    margin: 40px auto;
+    margin: 60px auto 30px;
     display: flex;
 }
 
 #intro {
     width: 300px;
-    margin-right: 20px;
+    margin-right: 64px;
 }
 
 main {
     margin: 32px 0;
+}
+
+main p {
+    font-size: 16px;
 }
 
 #buttons {
@@ -59,19 +86,6 @@ button:hover {
     text-decoration: underline;
 }
 
-button.fat {
-    color: white;
-    background: #ff5e84;
-    width: 150px;
-    height: 40px;
-    border-radius: 6px;
-    box-shadow: 0 8px 16px #ff5e8432;
-}
-
-button.fat:hover {
-    text-decoration: none;
-}
-
 footer {
     text-align: center;
     font-size: 14px;
@@ -87,41 +101,48 @@ footer {
     background-color: #FFF;
     box-shadow: 0 4px 16px -8px rgba(1, 1, 1, 0.1);
     border-radius: 8px;
-    padding: 32px;
-    margin-bottom: 32px;
+    padding: 19px;
+    margin-bottom: 20px;
 }
 
 .idea img {
-    width: 60px;
-    height: 60px;
-    margin-right: 32px;
+    width: 45px;
+    height: 40px;
+    margin-right: 20px;
 }
 
 .idea h3 {
     margin: 0;
+    font-size: 16px;
 }
 
 .idea p {
     margin: 8px 0;
     color: #777;
+    font-weight: bold;
 }
 
 .idea .description {
-    margin: 16px 0;
+    margin: -8px 0 8px;
 }
 
 #modal {
     background-color: #ff5e84;
     position: absolute;
     top: 0;
-    width: 100vw;
-    height: 100vh;
+    bottom: 0;
+    right: 0;
+    left: 0;
     display: flex;
     justify-content: center;
 }
 
+#modal.addScroll {
+    overflow: auto;
+}
+
 #modal .content {
-    margin-top: 128px;
+    margin-top: 50px;
     color: white;
 }
 
@@ -136,7 +157,7 @@ footer {
     margin: 0 auto;
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 20px;
+    gap: 15px;
 }
 
 .content form div:nth-child(3),
@@ -147,12 +168,12 @@ footer {
 
 form input, form textarea {
     width: 100%;
-    padding: 12px;
+    padding: 10px;
     box-sizing: border-box;
     border-radius: 6px;
     border: 1px solid rgb(141, 25, 52, 0.5);
     outline: none;
-    font-size: 16px;
+    font-size: 14px;
 }
 
 form label {
@@ -169,7 +190,7 @@ form a {
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 16px;
+    font-size: 14px;
     font-weight: bold;
     border-radius: 6px;
     align-self: end;
@@ -189,7 +210,7 @@ form button {
     height: 40px;
     border-radius: 6px;
     cursor: pointer;
-    margin-top: 32px;
+    margin-top: 1px;
     grid-column: 2;
     justify-self: end;
     transition: 400ms;
@@ -204,4 +225,70 @@ form button:hover {
 #modal.hide {
     opacity: 0;
     visibility: hidden;
+}
+#page-ideas #container{
+    display: block;
+}
+
+#page-ideas header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+#page-ideas nav {
+    display: flex;
+    align-items: center;
+}
+
+#page-ideas nav li {
+    list-style-type: none;
+    margin: 20px;
+}
+
+#page-ideas nav li a {
+    color: #25282B;
+}
+
+#page-ideas nav li a.button {
+    color: white;
+}
+
+#page-ideas nav a {
+    font-size: 16px;
+}
+
+#page-ideas nav li:last-child {
+    margin: 0;
+}
+
+section#title {
+    text-align: center;
+}
+
+section#title p {
+    opacity: 0.7;
+    margin: 0;
+    font-size: 14px;
+}
+
+section#title h1 {
+    margin: 0;
+    font-size: 28px;
+}
+
+section#ideas {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+}
+
+section#ideas .idea {
+    margin: 0px;
+}
+
+section#title,
+section#ideas,
+section#footer {
+    margin-top: 45px 0;   
 }
