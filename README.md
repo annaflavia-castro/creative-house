@@ -53,6 +53,6 @@ This project is under the MIT license. See the [LICENSE](LICENSE.md) for details
 
 ---
 
-<p align="center">Feito com ❤️ por <strong>Anna Flávia Castro</p>
+<p align="center">Made with ❤️ by <strong>Anna Flávia Castro</p>
 
 
